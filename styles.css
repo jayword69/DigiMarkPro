@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF4500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF4500;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+}
+
+#intro {
+    position: relative;
+    overflow: hidden;
+}
+
+#bgVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+}
+
+/* Capa superpuesta para oscurecer el video */
+.intro-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo con una capa semitransparente */
+    z-index: -1; /* Asegura que esta capa esté detrás del texto pero delante del video */
+}
+
+.intro-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.animated-text {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el título principal */
+.intro-content h1 {
+    color: rgba(255, 255, 255, 0.9); /* Blanco con opacidad para efecto sobre el video */
+    font-size: 3em; /* Ajusta el tamaño según lo necesites */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), 0px 0px 20px rgba(255, 255, 255, 0.4);
+    z-index: 1; /* Asegura que el texto esté por encima de la capa oscura */
+}
+
+/* Estilo para el subtítulo */
+.intro-content p {
+    color: rgba(240, 240, 240, 0.8); /* Gris claro con opacidad */
+    font-size: 1.5em; /* Ajusta el tamaño según lo necesites */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7), 0px 0px 15px rgba(255, 255, 255, 0.3);
+    z-index: 1; /* Asegura que el texto esté por encima de la capa oscura */
+}
+
+.servicio {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+}
+
+.servicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.servicio h2, .servicio p {
+    position: relative;
+    z-index: 2;
+}
+
+.servicio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#portafolio {
+    background: #f4f4f4;
+}
+
+.casos-estudio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.caso {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.caso:hover {
+    transform: translateY(-5px);
+}
+
+.btn-caso {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #FF4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.btn-caso:hover {
+    background: #FF8C00;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+}
+
+#contacto input, #contacto textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contacto button {
+    padding: 10px 20px;
+    background: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contacto button:hover {
+    background: #FF8C00;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+.servicio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.servicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.servicio-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.servicio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.servicio p {
+    margin-bottom: 30px;
+}
+
+.btn-servicio {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #FF4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.btn-servicio:hover {
+    background: #FF8C00;
+}
+
+#estrategia { background-image: url('1.png'); width: 1980px; height: 1080px; }
+#web { background-image: url('2.png'); width: 1980px; height: 1080px; }
+#seo { background-image: url('3.png'); width: 1980px; height: 1080px; }
+#contenido { background-image: url('4.png'); width: 1980px; height: 1080px; }
+#redes { background-image: url('5.png'); width: 1980px; height: 1080px; }
+#ppc { background-image: url('6.png'); width: 1980px; height: 1080px; }
+#email { background-image: url('7.png'); width: 1980px; height: 1080px; }
+#analisis { background-image: url('8.png'); width: 1980px; height: 1080px; }
+#cro { background-image: url('9.png'); width: 1980px; height: 1080px; }
+#influencers { background-image: url('10.png'); width: 1980px; height: 1080px; }
